@@ -1,145 +1,147 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курская земля: память, вера и труд – интерактивный путеводитель</title>
-    <style>
-        :root { --dark: #1a2a4a; --gold: #c9a227; --bg: #f6f3ec; --card: #ffffff; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Georgia, 'Times New Roman', serif; background: var(--bg); color: #2b2b2b; line-height: 1.6; }
-        header { background: linear-gradient(rgba(26,42,74,.92), rgba(26,42,74,.92)), url('https://wikimedia.org') center/cover; color: #fff; text-align: center; padding: 80px 20px; }
-        header h1 { font-size: 2.2em; letter-spacing: 1px; }
-        header p { color: var(--gold); font-style: italic; margin-top: 10px; }
-        nav { position: sticky; top: 0; background: var(--dark); display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; z-index: 10; }
-        nav a { color: #fff; text-text-decoration: none; padding: 12px 16px; font-size: .95em; }
-        nav a:hover { background: var(--gold); color: var(--dark); }
-        section { max-width: 1100px; margin: 0 auto; padding: 50px 20px; }
-        h2 { color: var(--dark); border-left: 6px solid var(--gold); padding-left: 12px; margin-bottom: 24px; font-size: 1.7em; }
-        .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .card { background: var(--card); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,.08); display: flex; flex-direction: column; }
-        .card img { width: 100%; height: 220px; object-fit: cover; display: block; background: #e0e0e0; }
-        .card .txt { padding: 18px 20px; flex-grow: 1; }
-        .card h3 { color: var(--dark); margin-bottom: 8px; font-size: 1.15em; }
-        .num { display: inline-block; background: var(--gold); color: #fff; border-radius: 50%; width: 30px; height: 30px; line-height: 30px; text-align: center; margin-right: 8px; font-weight: bold; font-family: sans-serif; font-size: 0.9em; }
-        @media (max-width: 600px) { header { padding: 50px 15px; } header h1 { font-size: 1.6em; } nav { flex-direction: column; text-align: center; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Курская земля: память, вера и труд — интерактивный путеводитель</title>
+<style>
+  :root{--dark:#1a2a4a;--gold:#c9a227;--bg:#f6f3ec;--card:#ffffff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:#2b2b2b;line-height:1.6;}
+  header{background:linear-gradient(rgba(26,42,74,.92),rgba(26,42,74,.92)),url('https://wikimedia.org') center/cover;color:#fff;text-align:center;padding:70px 20px;}
+  header h1{font-size:2.2em;letter-spacing:1px;}
+  header p{color:var(--gold);font-style:italic;margin-top:10px;}
+  nav{position:sticky;top:0;background:var(--dark);display:flex;flex-wrap:wrap;justify-content:center;gap:4px;z-index:10;}
+  nav a{color:#fff;text-decoration:none;padding:12px 16px;font-size:.95em;}
+  nav a:hover{background:var(--gold);color:var(--dark);}
+  section{max-width:1100px;margin:0 auto;padding:50px 20px;}
+  h2{color:var(--dark);border-left:6px solid var(--gold);padding-left:12px;margin-bottom:24px;font-size:1.7em;}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
+  .card{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08);}
+  .card img{width:100%;height:220px;object-fit:cover;display:block;}
+  .card .txt{padding:18px 20px;}
+  .card h3{color:var(--dark);margin-bottom:8px;font-size:1.15em;}
+  .num {display:inline-block;background:var(--gold);color:#fff;border-radius:50%;width:30px;height:30px;line-height:30px;text-align:center;font-weight:bold;margin-bottom:8px;}
+  table{width:100%;border-collapse:collapse;background:#fff;}
+  td,th{border:1px solid #ddd;padding:10px 14px;text-align:left;}
+  th{background:var(--dark);color:#fff;}
+  footer{background:var(--dark);color:#fff;text-align:center;padding:40px 20px;margin-top:40px;}
+  ul{list-style-type:square;margin-left:20px;margin-bottom:15px;}
+  li{margin-bottom:8px;}
+</style>
 </head>
 <body>
 
 <header>
-    <h1>Курская земля: память, вера и труд</h1>
-    <p>Интерактивный путеводитель по главным достопримечательностям региона</p>
+  <h1>Курская земля: память, вера и труд</h1>
+  <p>Интерактивный путеводитель и историко-культурный маршрут по Курской области<br>
+  Автор проекта: Бабанина Екатерина</p>
 </header>
 
 <nav>
-    <a href="#about">О регионе</a>
-    <a href="#places">Достопримечательности</a>
+  <a href="#about">О регионе</a><a href="#geo">География</a><a href="#econ">Экономика</a>
+  <a href="#culture">Культура и религия</a><a href="#people">Знаменитые земляки</a>
+  <a href="#route">Маршрут</a><a href="#lit">Литература</a>
 </nav>
 
 <section id="about">
-    <h2>О Курской области</h2>
-    <p style="margin-bottom: 15px;">Курская область — уникальный регион Центральной России с богатейшим историческим, духовным и индустриальным наследием. Здесь переплетаются ратные подвиги предков, вековые православные традиции и мощь современной промышленности.</p>
+  <h2>Курская область — соловьиный край России</h2>
+  <div class="cols">
+    <div class="card"><img src="https://wikimedia.org" alt="Курск, Красная площадь">
+      <div class="txt"><h3>Общие сведения</h3>
+      Курская область образована 13 июня 1934 года. Расположена на юге европейской части России,
+      в пределах южной окраины Среднерусской возвышенности и Среднедонской низменности.
+      Площадь — около 30 тыс. км², население — более 1 миллиона человек. Административный中心 —
+      город Курск (около 440 тыс. жителей). Область граничит с Орловской, Липецкой, Воронежской
+      и Белгородской областями, а на юге — с Украиной.</div></div>
+    <div class="card"><img src="https://wikimedia.org" alt="Знаменский собор">
+      <div class="txt"><h3>Город Курск</h3>
+      Курск — один из древнейших русских городов: летописное упоминание относится к 1032 году,
+      ко времени князя Ярослава Мудрого. Город вырос на реке Тускарь как южный форпост Руси.
+      Курск прославился крупнейшей в России Коренной ярмаркой, самоварным и фаянсовым промыслами,
+      а в XX веке стал символом мужества — именно здесь развернулась Курская битва 1943 года.
+      За стойкость и мужество защитников Курску присвоено почётное звание «Город воинской славы».</div></div>
+    <div class="card"><img src="https://wikimedia.org" alt="Триумфальная арка, Курск">
+      <div class="txt"><h3>Символы региона</h3>
+      Герб Курской области воспроизводит исторический герб губернского города Курска, утверждённый
+      в 1780 году: три летящие куропатки. Официальный бренд области —
+      «Соловьиный край»: неповторимая песня курского соловья звучит здесь с первых дней тёплой весны и известна на всю страну.</div></div>
+  </div>
 </section>
 
-<section id="places">
-    <h2>Маршрут путеводителя</h2>
-    <div class="cols">
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Красная площадь">
-            <div class="txt">
-                <h3><span class="num">1</span>Красная площадь</h3>
-                <p>Главная площадь Курска, сердце города, откуда начинаются ключевые туристические и исторические маршруты.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Знаменский собор">
-            <div class="txt">
-                <h3><span class="num">2</span>Знаменский собор</h3>
-                <p>Величественный кафедральный собор, памятник архитектуры классицизма, построенный в честь победы в Отечественной войне 1812 года.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Троицкий собор">
-            <div class="txt">
-                <h3><span class="num">3</span>Троицкий собор</h3>
-                <p>Один из старейших храмов Курска, сохранивший дух древнего зодчества и являющийся важной частью духовной жизни города.</p>
-            </div>
-        </div>
-        <div class="card">
-
-
-<img src="https://wikimedia.org" alt="Сергиево-Казанский собор">
-            <div class="txt">
-                <h3><span class="num">4</span>Сергиево-Казанский собор</h3>
-                <p>Шедевр русского барокко XVIII века с уникальным резным иконостасом, поражающим своей красотой и изяществом.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Триумфальная арка">
-            <div class="txt">
-                <h3><span class="num">5</span>Триумфальная арка</h3>
-                <p>Величественный монумент на въезде в город, воздвигнутый в память о великом подвиге советских солдат на Курской дуге.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Вечный огонь">
-            <div class="txt">
-                <h3><span class="num">6</span>Вечный огонь</h3>
-                <p>Мемориальный комплекс, где горит священный огонь в память о павших героях Великой Отечественной войны.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Диорама">
-            <div class="txt">
-                <h3><span class="num">7</span>Диорама Курской битвы</h3>
-                <p>Уникальный военно-исторический музей, масштабно воссоздающий события величайшего танкового сражения в истории.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Мемориал Подводная лодка Курск">
-            <div class="txt">
-                <h3><span class="num">8</span>Памятник подлодке «Курск»</h3>
-                <p>Трогательный мемориал, посвященный памяти экипажа атомного подводного крейсера «Курск», трагически погибшего в 2000 году.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Коренная пустынь">
-            <div class="txt">
-                <h3><span class="num">9</span>Коренная пустынь</h3>
-                <p>Знаменитый мужской монастырь, основанный на месте обретения чудотворной иконы «Знамение», духовный центр Курского края.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Усадьба Марьино">
-            <div class="txt">
-                <h3><span class="num">10</span>Усадьба Марьино</h3>
-                <p>Дворцово-парковый ансамбль князей Барятинских, поражающий своей изысканной архитектурой и старинным ландшафтным парком.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Усадьба Марьино с воздуха">
-            <div class="txt">
-                <h3><span class="num">11</span>Усадьба Марьино (вид с воздуха)</h3>
-                <p>Потрясающая панорама дворцового комплекса, раскрывающая всю геометрию и масштаб княжеских владений.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Водяная мельница">
-            <div class="txt">
-                <h3><span class="num">12</span>Красниковская водяная мельница</h3>
-                <p>Уникальный действующий памятник деревянного зодчества начала XVIII века, сохранившийся до наших дней без единого гвоздя.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://wikimedia.org" alt="Озера Курской области">
-            <div class="txt">
-                <h3><span class="num">13</span>Живописные озера</h3>
-                <p>Природные богатства края, предлагающие чистейший воздух, тишину и великолепные виды для отдыха.</p>
-            </div>
-        </div>
-    </div>
+<section id="geo">
+  <h2>География и природные богатства</h2>
+  <table>
+    <tr><th>Показатель</th><th>Описание</th></tr>
+    <tr><td>Рельеф</td><td>Равнинный: возвышенности на севере, низменность на юге, чернозёмы — одни из плодороднейших в мире</td></tr>
+    <tr><td>Реки</td><td>Сейм, Псёл, Тускарь, Свапа, Суджа</td></tr>
+    <tr><td>Климат</td><td>Умеренно континентальный, с тёплым летом и умеренно холодной зимой</td></tr>
+    <tr><td>Главное богатство</td><td>Курская магнитная аномалия (КМА) — одно из крупнейших железорудных месторождений планеты; на её базе работает Михайловский горно-обогатительный комбинат</td></tr>
+    <tr><td>Уникальные места</td><td>Цветные озёра Железногорского района, старинная Коренная пустынь, Центрально-Чернозёмный заповедник имени Алехина</td></tr>
+  </table>
 </section>
+
+<section id="econ">
+  <h2>Экономика региона</h2>
+  <div class="cols">
+    <div class="card"><div class="txt"><h3>Энергетика</h3>
+    Курская АЭС в наукограде Курчатове — одна из крупнейших атомных станций страны, дающая электроэнергию
+    десяткам регионов. Прямо сейчас рядом строится ультрасовременная станция замещения Курская АЭС-2.</div></div>
+    <div class="card"><div class="txt"><h3>Промышленность</h3>
+    Горнодобывающая отрасль (Михайловский ГОК), машиностроение, химическая промышленность, Курский аккумуляторный завод, а также легкая и текстильная индустрия.</div></div>
+    <div class="card"><div class="txt"><h3>Сельское хозяйство</h3>
+    Курская область — традиционная житница: здесь выращивают пшеницу, гречиху, сахарную свёклу и подсолнечник. Активно развивается современное животноводство.</div></div>
+  </div>
+</section>
+
+<section id="culture">
+  <h2>Культура и религия</h2>
+  <div class="cols">
+    <div class="card"><img src="https://wikimedia.org" alt="Свято-Коренная пустынь"><div class="txt"><h3>Православные святыни</h3>
+    Главная святыня края — чудотворная икона «Знамение» Божией Матери Курская Коренная. Духовным центром является мужской монастырь Свято-Коренная пустынь под Курском, основанный на месте обретения святыни.</div></div>
+    <div class="card"><img src="https://wikimedia.org" alt="Водяная мельница, Красниково"><div class="txt"><h3>Народные промыслы</h3>
+    Жемчужина деревянного зодчества — действующая водяная мельница начала XVIII века в селе Красниково Пристенского района. Она уникальна тем, что построена без единого гвоздя и до сих пор исправно работает.</div></div>
+    <div class="card"><img src="https://wikimedia.org" alt="Музей-диорама Курская битва"><div class="txt"><h3>Память о войне</h3>
+    Курская битва (лето 1943 года) навсегда вошла в мировую историю. Память о великом танковом сражении и героическом подвиге защитников Родины бережно хранят мемориальный комплекс «Курская дуга» и Триумфальная арка.</div></div>
+  </div>
+</section>
+
+<section id="people">
+  <h2>Выдающиеся жители</h2>
+  <div class="cols">
+    <div class="card"><div class="txt"><h3>Н. Н. Раевский (1777–1829)</h3>
+    Герой Отечественной войны 1812 года, прославленный генерал, чей род был тесно связан с Курской губернией. Его мужество в Бородинском сражении стало легендой.</div></div>
+    <div class="card"><div class="txt"><h3>Преподобный Серафима Саровский</h3>
+    Один из величайших и наиболее почитаемых православных святых в мире. Родился и провел свои детские годы в Курске, где и начался его великий духовный путь.</div></div>
+    <div class="card"><div class="txt"><h3>Г. В. Свиридов (1915–1998)</h3>
+    Выдающийся советский композитор и пианист, народный артист СССР. Родился в городе Фатеж Курской губернии, автор знаменитой музыкальной иллюстрации к повести Пушкина «Метель».</div></div>
+  </div>
+</section>
+
+<section id="route">
+  <h2>Историко-культурный маршрут</h2>
+  <div class="cols">
+    <div class="card"><img src="https://wikimedia.org" alt="Памятник экипажу АПРК Курск">
+    <div class="txt"><h3>Мемориал АПРК «Курск»</h3>
+    Трогательный памятник в Курске, посвященный мужеству моряков-подводников затонувшего в 2000 году одноименного атомного крейсера. Важное место скорби и народной памяти.</div></div>
+    <div class="card"><img src="https://wikimedia.org" alt="Усадьба Марьино">
+    <div class="txt"><h3>Дворцово-парковый комплекс «Марьино»</h3>
+    Величественная загородная усадьба князей Барятинских в Рыльском районе. Шедевр дворцовой архитектуры XIX века, окруженный великолепным ландшафтным парком с прудами.</div></div>
+  </div>
+</section>
+
+<section id="lit">
+  <h2>Рекомендуемая литература</h2>
+  <ul>
+    <li>«История Курского края» — под редакцией ведущих курских историков и краеведов.</li>
+    <li>Краеведческие очерки и путеводители по Коренной пустыни и дворцовым ансамблям региона.</li>
+    <li>Исторические хроники и воспоминания участников битвы на Курской дуге.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2026 Интерактивный путеводитель по Курской области. Все права защищены.<br>Разработано для сохранения исторической памяти.</p>
+</footer>
 
 </body>
 </html>
